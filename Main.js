@@ -1,4 +1,5 @@
-fs = require('fs');
+const fs = require('fs');
+const { filterCookies } = require('./src/filterCookies');
 
 const isValidCLI = (cli) => {
   if (cli.length < 5) {
@@ -8,18 +9,17 @@ const isValidCLI = (cli) => {
   }
 
   return true;
-}
+};
 
 const Main = () => {
   const cli = process.argv;
   if (!isValidCLI(cli)) return;
 
-  fs.readFile(cli[2], 'utf8', (err, data) => {
+  fs.readFile(cli[2], 'utf8', (err, cookies) => {
     if (err) return console.log(err);
-
-    console.log(data);
+    
+    filterCookies(cookies);
   })
-  
 };
 
 Main();
