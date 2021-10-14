@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { mostActiveCookie } = require('./src/findMostActiveCookie');
+const { findMostActiveCookie } = require('./src/findMostActiveCookie');
 
 const isValidCLI = (cli) => {
   if (cli.length < 5) {
@@ -20,7 +20,7 @@ const Main = () => {
   fs.readFile(cli[2], 'utf8', (err, cookies) => {
     if (err) return console.log(err);
     
-    console.log(mostActiveCookie(cookies, date));
+    console.log(findMostActiveCookie(cookies, date));
   })
 };
 

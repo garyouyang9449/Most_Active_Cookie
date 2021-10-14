@@ -4,7 +4,7 @@ const filterCookies = (cookies, date) => {
   });
 };
 
-const mostActiveCookie = (cookies, date) => {
+const findMostActiveCookie = (cookies, date) => {
   const filteredCookie = filterCookies(cookies, date);
   let occuence = {};
 
@@ -32,4 +32,4 @@ const mostActiveCookie = (cookies, date) => {
   return mostActiveCookie;
 }
 
-exports.mostActiveCookie = mostActiveCookie;
+exports.findMostActiveCookie = findMostActiveCookie;
