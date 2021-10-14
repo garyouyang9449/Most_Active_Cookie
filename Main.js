@@ -20,7 +20,7 @@ const Main = () => {
   fs.readFile(cli[2], 'utf8', (err, cookies) => {
     if (err) return console.log(err);
     
-    mostActiveCookie(cookies, date);
+    console.log(mostActiveCookie(cookies, date));
   })
 };
 
