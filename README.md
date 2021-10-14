@@ -13,3 +13,5 @@ $git clone https://github.com/garyouyang9449/Most_Active_Cookie.git
 
 $node Main.js <path-to-your-cookie-log-file> -d <year-month-day>
 ```
+
+The result will appear on the terminal console
